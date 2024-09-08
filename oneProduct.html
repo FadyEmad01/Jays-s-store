@@ -22,702 +22,113 @@
 <body>
 
     <header id="header" class="bg-black">
-        <p class="text-center fc-white py-2">Lorem ipsum dolor sit.</p>
+        <p class="text-center fc-white py-2 mb-0">Lorem ipsum dolor sit.</p>
     </header>
-    <nav class="navbar navbar-expand-lg py-3 bg-white" style="position: sticky;  top: 0; z-index: 999999;">
+  
+    <nav class="navbar navbar-expand-lg py-3 bg-white" style="position: sticky;  top: 0; z-index: 999;">
         <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+            <div class="d-flex align-items-center gap-2">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style="border: none;">
+                    <img src="assets/img/humb-menu.svg" style="width: 24px;" alt="">
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="assets/img/logo.jpg" alt=""
+                        style="width: 120px;"></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Shop
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="allProduct.html">All Products</a></li>
+                                <li><a class="dropdown-item" href="allProduct.html">Tops</a></li>
+                                <li><a class="dropdown-item" href="allProduct.html">T-Shirt</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-3" role="search">
+                <a href="cart.html">
+                    <div class="position-relative">
+                        <img src="assets/img/cart.svg" style="width: 22px;" alt=""><span
+                            class="position-absolute top-100 start-100 translate-middle badge-cart rounded-pill cart-Notify">+9
+                            <span class="visually-hidden">unread messages</span></span>
+                    </div>
+                </a>
+                <a href=""><img src="assets/img/user.svg" style="width: 29px;" alt=""></a>
             </div>
         </div>
+
     </nav>
 
-
-    <!-- <section id="home" class="pt-1 pb-5">
-        <div class="container ">
-            <div class="hero p-4">
-                <div class="row fc-white align-content-end h-100 z-3">
-                    <div class="row justify-content-between align-items-center">
-                        <div class="col-12">
-                            <h1 class="fw-bolder">TOLUS SPRING COLLECTION</h1>
-                        </div>
-                    </div>
-                    <div class="row justify-content-between align-items-center">
-                        <div class="col-12 col-lg-7">
-
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptatem autem nesciunt
-                                obcaecati fugiat.</p>
-                        </div>
-                        <div class="col-12 col-lg-5 text-lg-end text-start">
-                            <button class="btn-custom px-5 py-2 fw-bolder">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <a class="navbar-brand" href="index.html"><img src="assets/img/logo.jpg" alt="" style="width: 120px;"></a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-    </section>
-    <section id="newCollection" class="py-lg-5 pb-5">
-        <div class="container">
-            <div class="section-title">
-                <div class="text-center">
-                    <h2 class="fw-bolder">NEW COLLECTION</h2>
-                    <p class="fc-gray fw-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
-                        enim.</p>
-                </div>
-                <div class="row py-3">
-                    <div class="col-6 col-lg-3 pointer mb-3">
-                        <div class="card position-relative">
-                            <img src="assets/img/p1.jpeg" class="img-fluid" alt="...">
-                            <div class="card-body pt-2">
-                                <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example text to build
-                                    on the
-                                    card title and make up the bulk of the card's content.</p>
-                                <h5 class="fw-bolder text-truncate">$20</h5>
-                            </div>
-                            <div class="cart">
-                                <i class="fa-regular fa-heart fs-5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-lg-3 pointer mb-3">
-                        <div class="card position-relative">
-                            <img src="assets/img/p2.jpeg" class="img-fluid" alt="...">
-                            <div class="card-body pt-2">
-                                <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example text to build
-                                    on the
-                                    card title and make up the bulk of the card's content.</p>
-                                <h5 class="fw-bolder text-truncate">$20</h5>
-                            </div>
-                            <div class="cart">
-                                <i class="fa-regular fa-heart fs-5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-lg-3 pointer mb-3">
-                        <div class="card position-relative">
-                            <img src="assets/img/p3.jpeg" class="img-fluid" alt="...">
-                            <div class="card-body pt-2">
-                                <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example text to build
-                                    on the
-                                    card title and make up the bulk of the card's content.</p>
-                                <h5 class="fw-bolder text-truncate">$20</h5>
-                            </div>
-                            <div class="cart">
-                                <i class="fa-regular fa-heart fs-5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-lg-3 pointer mb-3">
-                        <div class="card position-relative">
-                            <img src="assets/img/p4.jpeg" class="img-fluid" alt="...">
-                            <div class="card-body pt-2">
-                                <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example text to build
-                                    on the
-                                    card title and make up the bulk of the card's content.</p>
-                                <h5 class="fw-bolder text-truncate">$20</h5>
-                            </div>
-                            <div class="cart">
-                                <i class="fa-regular fa-heart fs-5"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <button class="btn-custom-dark px-5 py-2 d-flex align-items-center gap-2">Show All <i
-                            class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Shop
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="allProduct.html">All Products</a></li>
+                        <li><a class="dropdown-item" href="allProduct.html">Tops</a></li>
+                        <li><a class="dropdown-item" href="allProduct.html">T-Shirt</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact us</a>
+                </li>
+            </ul>
         </div>
-    </section>
-    <section id="category" class="pb-4">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-10 col-lg-4 col-md-6 pb-3">
-                    <div class="man p-3">
-                        <div class="row align-content-end h-100">
-                            <h5 class="fw-bolder fc-white fs-1">MAN</h5>
-                            <div class="d-flex">
-                                <button class="btn-custom px-5 py-2 fw-bolder">See Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-10 col-lg-4 col-md-6 pb-3">
-                    <div class="woman p-3">
-                        <div class="row align-content-end h-100">
-                            <h5 class="fw-bolder fc-white fs-1">WOMAN</h5>
-                            <div class="d-flex">
-                                <button class="btn-custom px-5 py-2 fw-bolder">See Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-10 col-lg-4 col-md-6 pb-3">
-                    <div class="kids p-3">
-                        <div class="row align-content-end h-100">
-                            <h5 class="fw-bolder fc-white fs-1">KIDS</h5>
-                            <div class="d-flex">
-                                <button class="btn-custom px-5 py-2 fw-bolder">See Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section> -->
+    </div>
 
 
-    <!-- <section>
+
+    <section id="oneProduct" class="pb-5">
         <div class="container py-5">
-            <div class="row">
-                <div class="col-lg-3 col-8 position-relative d-none d-lg-block">
-                    <aside class="position-sticky" style="top: 100px;">
-                        <div class="card card-aside">
-                            <div class="card-body">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <h5>Filter</h5>
-                                            <i class="fa-solid fa-filter"></i>
-                                        </div>
-                                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
-                                            aria-orientation="vertical">
-                                            <button class="text-start nav-link  active" id="v-pills-home-tab"
-                                                data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button"
-                                                role="tab" aria-controls="v-pills-home"
-                                                aria-selected="true">Home</button>
-                                            <button class="text-start nav-link " id="v-pills-profile-tab"
-                                                data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button"
-                                                role="tab" aria-controls="v-pills-profile"
-                                                aria-selected="false">Profile</button>
-                                            <button class="text-start nav-link " id="v-pills-disabled-tab"
-                                                data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button"
-                                                role="tab" aria-controls="v-pills-disabled" aria-selected="false"
-                                                disabled>Disabled</button>
-                                            <button class="text-start nav-link " id="v-pills-messages-tab"
-                                                data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button"
-                                                role="tab" aria-controls="v-pills-messages"
-                                                aria-selected="false">Messages</button>
-                                            <button class="text-start nav-link " id="v-pills-settings-tab"
-                                                data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button"
-                                                role="tab" aria-controls="v-pills-settings"
-                                                aria-selected="false">Settings</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
-                </div>
-                <main class="col-lg-9 col-12" id="allProduct">
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h1 class="fs-1 mb-0 pb-0">ALL PRODUCTS</h1>
-                        <div class="dropdown d-lg-none d-block">
-                            <button class="dropdownBtn dropdown-toggle px-3" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Filter
-                            </button>
-                            <div class="dropdown-menu" style="width: 200px;">
-                                <div class="row p-2">
-                                    <div class="col-12">
-
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <h5>Filter</h5>
-                                                    <i class="fa-solid fa-filter"></i>
-                                                </div>
-                                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
-                                                    aria-orientation="vertical">
-                                                    <button class="text-start nav-link active" id="v-pills-home-tab"
-                                                        data-bs-toggle="pill" data-bs-target="#v-pills-home"
-                                                        type="button" role="tab" aria-controls="v-pills-home"
-                                                        aria-selected="true">Home</button>
-                                                    <button class="text-start nav-link" id="v-pills-profile-tab"
-                                                        data-bs-toggle="pill" data-bs-target="#v-pills-profile"
-                                                        type="button" role="tab" aria-controls="v-pills-profile"
-                                                        aria-selected="false">Profile</button>
-                                                    <button class="text-start nav-link" id="v-pills-disabled-tab"
-                                                        data-bs-toggle="pill" data-bs-target="#v-pills-disabled"
-                                                        type="button" role="tab" aria-controls="v-pills-disabled"
-                                                        aria-selected="false" disabled>Disabled</button>
-                                                    <button class="text-start nav-link" id="v-pills-messages-tab"
-                                                        data-bs-toggle="pill" data-bs-target="#v-pills-messages"
-                                                        type="button" role="tab" aria-controls="v-pills-messages"
-                                                        aria-selected="false">Messages</button>
-                                                    <button class="text-start nav-link" id="v-pills-settings-tab"
-                                                        data-bs-toggle="pill" data-bs-target="#v-pills-settings"
-                                                        type="button" role="tab" aria-controls="v-pills-settings"
-                                                        aria-selected="false">Settings</button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-content" id="v-pills-tabContent">
-                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                            aria-labelledby="v-pills-home-tab" tabindex="0">
-                            <div class="row">
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p1.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p1.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p1.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p1.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                            aria-labelledby="v-pills-profile-tab" tabindex="0">
-                            <div class="row">
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p2.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p2.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p2.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p2.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel"
-                            aria-labelledby="v-pills-disabled-tab" tabindex="0">
-                            <div class="row">
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p3.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p3.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p3.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p3.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                            aria-labelledby="v-pills-messages-tab" tabindex="0">
-                            <div class="row">
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p3.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p3.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p3.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p3.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
-                            aria-labelledby="v-pills-settings-tab" tabindex="0">
-                            <div class="row">
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p4.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p4.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p4.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-lg-4 pointer mb-3">
-                                    <div class="card position-relative">
-                                        <img src="assets/img/p4.jpeg" class="img-fluid" alt="...">
-                                        <div class="card-body pt-2">
-                                            <h5 class="card-title text-truncate mb-0">Card title</h5>
-                                            <p class="card-text text-truncate my-lg-1 my-0 fc-gray">Some quick example
-                                                text to
-                                                build
-                                                on the
-                                                card title and make up the bulk of the card's content.</p>
-                                            <h5 class="fw-bolder text-truncate">$20</h5>
-                                        </div>
-                                        <div class="cart">
-                                            <i class="fa-regular fa-heart fs-5"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="d-flex justify-content-end">
-                        <nav aria-label="Page navigation example">
-                            <div class="d-flex align-items-center gap-2">
-                                <div class="icon-Previous me-1">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </div>
-                                <div class="page-number d-flex align-items-center gap-1">
-                                    <a href="" class="paginationBtn activePaginationBtn">1</a>
-                                    <a href="" class="paginationBtn">2</a>
-                                    <a href="" class="paginationBtn">3</a>
-                                    <a href="" class="paginationBtn">4</a>
-                                </div>
-                                <div class="icon-Next ms-1">
-                                    <i class="fa-solid fa-chevron-right"></i>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                    
-                </main>
-            </div>
-        </div>
-    </section> -->
-
-    <section id="oneProduct">
-        <div class="container py-5">
-            <div class="row">
+            <div class="row ">
                 <div class="col-12 col-lg-6">
                     <div class="row">
                         <div class="col-12 px-2" style="margin-bottom: 12px;">
-                            <img id="mainImage" class="img-fluid img-oneProduct pointer" src="assets/img/p1.jpeg" alt=""
+                            <img id="mainImage" class="img-fluid img-oneProduct pointer" src="assets/img/p-blue-t-shit-2.jpeg" alt=""
                                 onclick="openImage(this)">
                         </div>
                         <div class="col-3 px-2">
-                            <img class="img-fluid img-oneProduct-sub pointer img-selected" src="assets/img/p1.jpeg"
+                            <img class="img-fluid img-oneProduct-sub pointer img-selected" src="assets/img/p-blue-t-shit-2.jpeg"
                                 alt="" onclick="changeMainImage(this)">
                         </div>
                         <div class="col-3 px-2">
-                            <img class="img-fluid img-oneProduct-sub pointer" src="assets/img/p2.jpeg" alt=""
+                            <img class="img-fluid img-oneProduct-sub pointer" src="assets/img/p-white-t-shirt-2.jpeg" alt=""
                                 onclick="changeMainImage(this)">
                         </div>
                         <div class="col-3 px-2">
-                            <img class="img-fluid img-oneProduct-sub pointer" src="assets/img/p3.jpeg" alt=""
+                            <img class="img-fluid img-oneProduct-sub pointer" src="assets/img/p-pink-t-shirt.jpeg" alt=""
                                 onclick="changeMainImage(this)">
                         </div>
                         <div class="col-3 px-2">
-                            <img class="img-fluid img-oneProduct-sub pointer" src="assets/img/p5.jpeg" alt=""
+                            <img class="img-fluid img-oneProduct-sub pointer" src="assets/img/p-blue-t-shit-4.jpeg" alt=""
                                 onclick="changeMainImage(this)">
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 pt-4 pt-lg-0">
-                    <div class="d-flex pb-2 gap-2">
+                <div class="col-12 col-lg-6 pt-4 pt-lg-0 pb-5">
+                    <div class="d-flex pb-3 gap-2">
                         <span class="inStock px-3 fw-semibold">In Stock</span>
                         <span class="outStock px-3 fw-semibold">Out of Stock</span>
                     </div>
@@ -727,40 +138,91 @@
                     </div>
                     <h2 class="fw-bolder fs-2 "><span
                             class="text-decoration-line-through fw-normal fst-italic fc-gray">$50</span> $20</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, id iste! Dolore, deserunt
+
+                    <p class="fs-5 fw-bolder mb-0 pt-2">Description:</p>
+                    <p class="lh-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, id iste! Dolore,
+                        deserunt
                         dignissimos minus facere modi quidem fuga, totam earum obcaecati, dolorum consectetur cupiditate
                         corporis. Ipsam laboriosam quam quae.</p>
-                    <!-- <div class="radio-group">
-                        <label class="radio-option">
-                            <input type="radio" name="color" value="red" />
-                            <span class="radio-circle" style="background-color: black;"></span>
-                        </label>
 
-                        <label class="radio-option">
-                            <input type="radio" name="color" value="green" />
-                            <span class="radio-circle" style="background-color: rgb(255, 124, 231);"></span>
-                        </label>
+                    <div class="d-flex gap-2 flex-column">
+                        <span class="fs-5 fw-bolder">Color:</span>
+                        <div class="d-flex align-items-center gap-2 warp">
+                            <input type="radio" class="btn-check" name="color" id="black" autocomplete="off" checked>
+                            <label class="color-checked px-3 py-1 fw-semibold pointer" for="black">Black</label>
 
-                        <label class="radio-option">
-                            <input type="radio" name="color" value="blue" />
-                            <span class="radio-circle" style="background-color: rgb(110, 173, 255);"></span>
-                        </label>
+                            <input type="radio" class="btn-check" name="color" id="pink" autocomplete="off">
+                            <label class="color-checked px-3 py-1 fw-semibold pointer" for="pink">Pink</label>
+
+                            <input type="radio" class="btn-check" name="color" id="babyBlue" autocomplete="off">
+                            <label class="color-checked px-3 py-1 fw-semibold pointer" for="babyBlue">Baby Blue</label>
+
+                            <input type="radio" class="btn-check" name="color" id="red" autocomplete="off">
+                            <label class="color-checked px-3 py-1 fw-semibold pointer" for="red">Red</label>
+
+                            <input type="radio" class="btn-check" name="color" id="white" autocomplete="off">
+                            <label class="color-checked px-3 py-1 fw-semibold pointer" for="white">White</label>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 flex-column pt-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span class="fs-5 fw-bolder">Size:</span>
+                            <span class="fs-6 fw-normal pointer" data-bs-toggle="modal" data-bs-target="#sizeModal"
+                                style="text-decoration: underline; text-underline-offset: 2px;">What's my size?</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 warp">
+
+
+                            <input type="radio" class="btn-check" name="size" id="S/M" autocomplete="off">
+                            <label class="color-checked px-3 py-1 fw-semibold pointer" for="S/M">S/M</label>
+
+                            <input type="radio" class="btn-check" name="size" id="L/XL" autocomplete="off">
+                            <label class="color-checked px-3 py-1 fw-semibold pointer" for="L/XL">L/XL</label>
+
+
+                        </div>
                     </div>
 
-
-                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-                    <label class="btn btn-secondary" for="option1">Checked</label>
-                    
-                    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-                    <label class="btn btn-secondary" for="option2">Radio</label>
-                    
-                    
-                    <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-                    <label class="btn btn-secondary" for="option4">Radio</label> -->
-
-
+                    <div class="row pt-4">
+                        <div class="col-7">
+                            <button class="solidBtn w-100 fw-semibold" style="padding: 12px 0px;">Buy now</button>
+                        </div>
+                        <div class="col-5">
+                            <button class="outlineBtn w-100 fw-semibold" style="padding: 12px 0px;">Add to cart
+                            </button>
+                        </div>
+                        <!-- <div class="col-1">
+                            <button class="outlineBtn p-2 love">
+                                <i  class="fa-regular fa-heart fs-5"></i>
+                            </button>
+                        </div> -->
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <!-- modal -->
+
+        <div class="modal fade" id="sizeModal" tabindex="-1" aria-labelledby="sizeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="sizeModalLabel">What's my size</h1>
+                        <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="img-fluid" src="assets/img/whatMySize.png" alt="">
+                    </div>
+                    <!-- <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+
+        <!--  -->
         </div>
     </section>
 
