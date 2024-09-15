@@ -598,3 +598,32 @@ a {
         object-fit: cover;
     }
 }
+
+
+
+#seacrhBackdrop .input-group-text{
+    background-color: transparent;
+    border-right: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+#seacrhBackdrop .form-control{
+    background-color: transparent;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: none;
+    padding-left: 0px;
+}
+#seacrhBackdrop .card .card-body img {
+    width: 70px;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+    object-fit: cover;
+}
+#seacrhBackdrop .card {
+    border-radius: 12px;
+    background-color: #f6f6f6;
+    border: none;
+}
