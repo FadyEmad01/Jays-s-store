@@ -97,9 +97,11 @@ footer {
     aspect-ratio: 6/3;
     z-index: 0;
 }
-.card{
+
+.card {
     background-color: transparent;
 }
+
 #home .hero:hover::after {
     background-color: rgba(0, 0, 0, 0.23);
 }
@@ -226,6 +228,7 @@ footer {
     position: relative;
     z-index: 0;
 }
+
 #category .tops::after {
     content: '';
     width: 100%;
@@ -239,9 +242,11 @@ footer {
     transition: background-color 0.3s ease;
     /* Add transition for smooth effect */
 }
+
 #category .tops:hover::after {
     background-color: rgba(0, 0, 0, 0.23);
 }
+
 #category .t-shirt {
     background-image: url("../img/p-blue-t-shit-2.jpeg");
     background-size: cover;
@@ -253,6 +258,7 @@ footer {
     position: relative;
     z-index: 0;
 }
+
 #category .t-shirt::after {
     content: '';
     width: 100%;
@@ -266,6 +272,7 @@ footer {
     transition: background-color 0.3s ease;
     /* Add transition for smooth effect */
 }
+
 #category .t-shirt:hover::after {
     background-color: rgba(0, 0, 0, 0.23);
 }
@@ -599,16 +606,19 @@ a {
     }
 }
 
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
 
-
-#seacrhBackdrop .input-group-text{
+#seacrhBackdrop .input-group-text {
     background-color: transparent;
     border-right: none;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
 }
-#seacrhBackdrop .form-control{
+
+#seacrhBackdrop .form-control {
     background-color: transparent;
     border-right: 1px solid black;
     border-top: 1px solid black;
@@ -616,14 +626,76 @@ a {
     border-left: none;
     padding-left: 0px;
 }
+
 #seacrhBackdrop .card .card-body img {
     width: 70px;
     aspect-ratio: 1/1;
     border-radius: 8px;
     object-fit: cover;
 }
+
 #seacrhBackdrop .card {
     border-radius: 12px;
     background-color: #f6f6f6;
     border: none;
+}
+
+
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+
+#login{
+    overflow-x: hidden;
+}
+
+#login .img-login {
+    position: relative;
+    background-image: url('../img/p-white-t-shirt-2-hero.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* width: 100%; */
+    object-fit: cover;
+    /* border-radius: var(--border-radius); */
+    /* aspect-ratio: 6/3; */
+    z-index: 0;
+    border-right: 2px solid black;
+}
+
+#login .img-login::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.17); */
+    top: 0;
+    left: 0;
+    /* border-radius: var(--border-radius); */
+    z-index: -1;
+}
+
+#login .form-check-input {
+    background-color: transparent;
+    border: var(--color-black) 1px solid;
+}
+
+#login .form-check-input:checked {
+    background-color: var(--color-black);
+    border: var(--color-black) 1px solid;
+}
+
+#login .form-control {
+    border: var(--color-black) 1px solid;
+}
+
+
+#eyePassword .form-control {
+    border-right: none;
+}
+#eyePassword button {
+    border-right: 1px solid var(--color-black);
+    border-top: 1px solid var(--color-black);
+    border-bottom: 1px solid var(--color-black);
+    border-left: none;
 }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- font 1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <!-- font 2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+    <!--  -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Jay's</title>
+</head>
+
+<body>
+    <div id="login" class="row mx-auto" style="width: 100vw;
+        height: 100vh;">
+        <div class="col-6 img-login img-fluid d-none d-lg-block"></div>
+        <div class="col-12 col-lg-6 py-5">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <form class="col-11 col-lg-7" style="max-width: 400px;">
+                    <div class="text-center">
+                        <img src="assets/img/logo.jpg" class="mb-5" style="width: 200px;" alt="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <div class="input-group" id="eyePassword">
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <button class="btn" type="button" id="togglePassword">
+                                <i class="far fa-eye" style="display: none;"></i>
+                                <i class="far fa-eye-slash"></i>
+                            </button>
+                        </div>
+                        <div id="passwordHelpBlock" class="form-text text-danger">
+                            Your password must be 8-20 characters long, contain letters and numbers, and must not
+                            contain spaces, special characters, or emoji.
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                    </div>
+                    <button type="submit" class="w-100 solidBtn py-2 mb-2">Login</button>
+                    <div>
+                        <p>Dont't have an account? <a href="" class="pointer fc-black fw-semibold"
+                                style="text-decoration: underline; text-underline-offset: 2px;">Sign up</a></p>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var togglePasswordButton = document.getElementById('togglePassword');
+            var passwordInput = document.getElementById('exampleInputPassword1');
+            var iconEye = togglePasswordButton.querySelector('.fa-eye');
+            var iconEyeSlash = togglePasswordButton.querySelector('.fa-eye-slash');
+
+            togglePasswordButton.addEventListener('click', function () {
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    iconEyeSlash.style.display = 'none';
+                    iconEye.style.display = 'inline-block';
+                } else {
+                    passwordInput.type = 'password';
+                    iconEyeSlash.style.display = 'inline-block';
+                    iconEye.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
