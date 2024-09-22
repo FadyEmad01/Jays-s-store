@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- icon -->
+    <link href="assets/vendors/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendors/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <!--  -->
+    <!-- font 1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <!-- font 2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+    <!--  -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style-Dashboard.css">
+    <title>Jay's</title>
+</head>
+
+<body>
+    <nav class="navbar py-3 bg-white" style="position: sticky;  top: 0; z-index: 999;">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center gap-2">
+                <button class="navbar-toggler toggle-sidebar-btn" style="border: none;">
+                    <img src="../assets/img/humb-menu.svg" style="width: 24px;" alt="">
+                </button>
+                <a class="navbar-brand" href="../index.html"><img src="../assets/img/logo.jpg" alt=""
+                        style="width: 120px;"></a>
+                <!-- <ul class="d-flex gap-3 px-3 me-auto mb-2 mb-lg-0" style="list-style: none;">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                </ul> -->
+
+            </div>
+            <div class="d-flex align-items-center gap-3" role="search">
+                <a href="cart.html">
+                    <div class="position-relative">
+                        <img src="../assets/img/cart.svg" style="width: 22px;" alt=""><span
+                            class="position-absolute top-100 start-100 translate-middle badge-cart rounded-pill cart-Notify">+9
+                            <span class="visually-hidden">unread messages</span></span>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="modal" data-bs-target="#seacrhBackdrop"><img src="../assets/img/search.svg"
+                        style="width: 29px;" alt=""></a>
+                <a href=""><img src="../assets/img/user.svg" style="width: 29px;" alt=""></a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- ======= Sidebar ======= -->
+
+    <aside id="sidebar" class="sidebar pt-5">
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link " href="">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#Products-nav" data-bs-toggle="collapse" href="#">
+                    <i class='bx bx-package'></i></i><span>Products</span><i
+                        class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="Products-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>View all Products</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Add-product-Dashboard.html">
+                            <i class="bi bi-circle"></i><span>Add Products</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Products Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#Categories-nav" data-bs-toggle="collapse" href="#">
+                    <i class='bx bx-category'></i><span>Categories</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="Categories-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="forms-elements.html">
+                            <i class="bi bi-circle"></i><span>View all Categories</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="forms-layouts.html">
+                            <i class="bi bi-circle"></i><span>Add Categories</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Categories Nav -->
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#Admins-nav" data-bs-toggle="collapse" href="#">
+                    <i class="fa-regular fa-chess-king"></i><span>Admins</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="Admins-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="forms-elements.html">
+                            <i class="bi bi-circle"></i><span>View all Admins</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="forms-layouts.html">
+                            <i class="bi bi-circle"></i><span>Add Admins</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Admin Nav -->
+
+            <li class="nav-heading">Pages</li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="users-profile.html">
+                    <i class='bx bx-file'></i>
+                    <span>Order list</span>
+                </a>
+            </li><!-- End Order list Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-faq.html">
+                    <i class="bi bi-person"></i>
+                    <span>User List</span>
+                </a>
+            </li><!-- End User List Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-contact.html">
+                    <i class="bi bi-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li><!-- End Contact Page Nav -->
+
+        </ul>
+
+    </aside><!-- End Sidebar-->
+
+    <main id="main">
+        <div class="container-fluid">
+            <div class="row pt-4">
+                <div class="pagetitle">
+                    <h1>Dashboard</h1>
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                    </nav>
+                </div><!-- End Breadcrumbs with a page title -->
+                <div class="col-6 col-lg-3 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <p class="mb-0 fw-semibold">Total Revenue</p>
+                                <i class='bx bx-dollar fs-5'></i>
+                            </div>
+                            <p class="mb-0 fs-2 fw-bold">$45,231.89</p>
+                            <p class="mb-0 fc-gray fw-semibold" style="font-size: 14px;">+20.1% from last month</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <p class="mb-0 fw-semibold">Orders</p>
+                                <i class='bx bx-credit-card fs-5'></i>
+                            </div>
+                            <p class="mb-0 fs-2 fw-bold">+12,234</p>
+                            <p class="mb-0 fc-gray fw-semibold" style="font-size: 14px;">+19% from last month</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <p class="mb-0 fw-semibold">Users</p>
+                                <i class="bi bi-people fs-5 d-flex"></i>
+                            </div>
+                            <p class="mb-0 fs-2 fw-bold">+2350</p>
+                            <p class="mb-0 fc-gray fw-semibold" style="font-size: 14px;">+180% from last month</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <p class="mb-0 fw-semibold">Out of stock</p>
+                                <i class="bi bi-bag-x fs-5 d-flex"></i>
+                            </div>
+                            <p class="mb-0 fs-2 fw-bold">0</p>
+                            <p class="mb-0 fc-gray fw-semibold" style="font-size: 14px;">+100% from last month</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pb-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Recent Orders</h5>
+                            <hr>
+                            <div class="table-responsive">
+                                <table class="table align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Order ID</th>
+                                            <th scope="col">Product</th>
+                                            <th scope="col">Customer Name</th>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Amount</th>
+                                            <th scope="col">Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>#25426</th>
+                                            <td>card title</td>
+                                            <td>Mark</td>
+                                            <td>9/22/2004</td>
+                                            <td>2</td>
+                                            <td class="py-3">
+                                                <a href="" class="view-order py-2 px-2">
+                                                    View <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>#25426</th>
+                                            <td>card title</td>
+                                            <td>Mark</td>
+                                            <td>9/22/2004</td>
+                                            <td>2</td>
+                                            <td class="py-3">
+                                                <a href="" class="view-order py-2 px-2">
+                                                    View <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>#25426</th>
+                                            <td>card title</td>
+                                            <td>Mark</td>
+                                            <td>9/22/2004</td>
+                                            <td>2</td>
+                                            <td class="py-3">
+                                                <a href="" class="view-order py-2 px-2">
+                                                    View <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>#25426</th>
+                                            <td>card title</td>
+                                            <td>Mark</td>
+                                            <td>9/22/2004</td>
+                                            <td>2</td>
+                                            <td class="py-3">
+                                                <a href="" class="view-order py-2 px-2">
+                                                    View <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>#25426</th>
+                                            <td>card title</td>
+                                            <td>Mark</td>
+                                            <td>9/22/2004</td>
+                                            <td>2</td>
+                                            <td class="py-3">
+                                                <a href="" class="view-order py-2 px-2">
+                                                    View <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>#25426</th>
+                                            <td>card title</td>
+                                            <td>Mark</td>
+                                            <td>9/22/2004</td>
+                                            <td>2</td>
+                                            <td class="py-3">
+                                                <a href="" class="view-order py-2 px-2">
+                                                    View <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>#25426</th>
+                                            <td>card title</td>
+                                            <td>Mark</td>
+                                            <td>9/22/2004</td>
+                                            <td>2</td>
+                                            <td class="py-3">
+                                                <a href="" class="view-order py-2 px-2">
+                                                    View <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main-Dashboard.js"></script>
+</body>
+
+</html>
