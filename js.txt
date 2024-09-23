@@ -1,0 +1,97 @@
+let queuedImageArray = [];
+let inputDiv = document.querySelector(".uploadDiv");
+let input = document.getElementById("file");
+let displayImageDiv = document.querySelector(".image-display-dev");
+
+// Bootstrap Toast initialization
+let toastElement = document.getElementById("error-toast");
+let toast = new bootstrap.Toast(toastElement);
+
+input.addEventListener("change", () => {
+  const files = input.files;
+  let isValid = true;
+  for (let i = 0; i < files.length; i++) {
+    const fileType = files[i].type;
+    if (!fileType.match("image.*")) {
+      isValid = false;
+      displayToastErrorMessage("Only image files are allowed.");
+      break;
+    }
+  }
+
+  if (isValid) {
+    clearToastErrorMessage();
+    for (let i = 0; i < files.length; i++) {
+      queuedImageArray.push(files[i]);
+    }
+
+    input.disabled = true;
+    input.style.cursor = "not-allowed";
+    inputDiv.style.backgroundColor = "lightgray";
+  }
+
+  displayQueuedImage();
+});
+
+inputDiv.addEventListener("drop", (e) => {
+  e.preventDefault();
+  const files = e.dataTransfer.files;
+  let isValid = true;
+  for (let i = 0; i < files.length; i++) {
+    const fileType = files[i].type;
+    if (!fileType.match("image.*")) {
+      isValid = false;
+      displayToastErrorMessage("Only image files are allowed.");
+      break;
+    }
+  }
+
+  if (isValid) {
+    clearToastErrorMessage();
+    for (let i = 0; i < files.length; i++) {
+      if (queuedImageArray.every((image) => image.name !== files[i].name)) {
+        queuedImageArray.push(files[i]);
+      }
+    }
+    input.disabled = true;
+    input.style.cursor = "not-allowed";
+    inputDiv.style.backgroundColor = "lightgray";
+  }
+
+  displayQueuedImage();
+});
+
+function displayQueuedImage() {
+  if (queuedImageArray.length === 0) return;
+
+  let file = queuedImageArray[0];
+  let images = document.querySelectorAll(".displayImage");
+
+  images.forEach((imgElement) => {
+    imgElement.src = URL.createObjectURL(file);
+  });
+}
+
+function displayToastErrorMessage(message) {
+  let toastBody = document.querySelector("#error-toast .toast-body");
+  toastBody.innerText = message;
+  toast.show();
+}
+
+// Optional: Function to clear any existing error messages from the toast
+function clearToastErrorMessage() {
+  let toastBody = document.querySelector("#error-toast .toast-body");
+  toastBody.innerText = "";
+}
+
+function displayToastErrorMessage(message) {
+  let toastBody = document.querySelector("#error-toast .toast-body");
+  toastBody.innerText = message;
+  toast.show();
+}
+
+// Optional: Function to clear any existing error messages from the toast
+function clearToastErrorMessage() {
+  let toastBody = document.querySelector("#error-toast .toast-body");
+  toastBody.innerText = "";
+}
