@@ -282,6 +282,34 @@ a {
     color: var(--color-white);
     border-radius: 8px;
 }
+.btn-cancel{
+    text-wrap: nowrap;
+    border: 2px solid #dc3545;
+    background-color: var(--color-white);
+    color: #dc3545;
+    border-radius: 8px;
+    transition: .3s;
+}
+.btn-cancel:hover{
+    text-wrap: nowrap;
+    background-color: #c32837;
+    color: var(--color-white);
+    border-radius: 8px;
+}
+.btn-add{
+    text-wrap: nowrap;
+    border: 2px solid #198754;
+    background-color: var(--color-white);
+    color: #198754;
+    border-radius: 8px;
+    transition: .3s;
+}
+.btn-add:hover{
+    text-wrap: nowrap;
+    background-color: #166e45;
+    color: var(--color-white);
+    border-radius: 8px;
+}
 
 
 #main .form-control,
@@ -332,7 +360,9 @@ a {
     border-radius: var(--border-radius);
     aspect-ratio: 1/1.1;
     object-fit: cover;
+    background-color: gray;
 }
+
 .card-view .card-body {
     padding: 0;
 }
@@ -345,15 +375,18 @@ a {
     aspect-ratio: 1/1.1;
     object-fit: cover;
 }
+
 .img-oneProduct-sub {
     border-radius: 14px;
     aspect-ratio: 1/1;
     object-fit: cover;
 }
+
 .img-selected {
     border: 3px solid var(--color-black);
     opacity: 50%;
 }
+
 .color-checked {
     background-color: var(--color-white);
     border: 2px solid var(--color-black);
@@ -368,4 +401,51 @@ a {
     background-color: var(--color-black);
     color: var(--color-white);
     border: 2px solid var(--color-black);
+}
+
+.imgDisplay {
+    width: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+    background-color: gray;
+    border: none;
+    object-fit: cover;
+}
+.img-oneProduct {
+    width: 100%;
+    aspect-ratio: 1/1.1;
+    background-color: gray;
+}
+.img-oneProduct-sub {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: gray;
+}
+.toast-body{
+    background-color: var(--color-white);
+}
+
+.form-check-input , .form-check-input:focus{
+    background-color: transparent;
+    border: var(--color-black) 1px solid;
+}
+
+.form-check-input:checked {
+    background-color: var(--color-black);
+    border: var(--color-black) 1px solid;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.nav-pills .nav-link {
+    color: var(--color-black);
+    border-radius: 8px;
+}
+
+.modal-content{
+    border-radius: var(--border-radius);
 }

@@ -16,86 +16,147 @@ let input1 = document.getElementById("file1");
 
 let imgDisplay = document.querySelectorAll(".imgDisplay");
 
+let ImagePreview0 = document.querySelectorAll(".ImagePreview0");
+let ImagePreview1 = document.querySelectorAll(".ImagePreview1");
+let ImagePreview2 = document.querySelectorAll(".ImagePreview2");
+let ImagePreview3 = document.querySelectorAll(".ImagePreview3");
+
 let inputDiv = document.querySelector(".uploadDiv");
 
 let addSubImageBtn = document.getElementById("addSubImageBtn");
 
-console.log(imgDisplay);
-
 ImageArray = [];
 
 input1.addEventListener("change", () => {
-    const files = input1.files;
-    let isValid = true;
-    for (let i = 0; i < files.length; i++) {
-        const fileType = files[i].type;
-        if (!fileType.match("image.*")) {
-            isValid = false;
-            displayToastErrorMessage("Only image files are allowed.");
-            break;
-        }
-    }
-    if (isValid) {
-        clearToastErrorMessage();
+    if (ImageArray.length < 4) {
+        const files = input1.files;
+        let isValid = true;
         for (let i = 0; i < files.length; i++) {
-            ImageArray.push(files[i]);
+            const fileType = files[i].type;
+            if (!fileType.match("image.*")) {
+                isValid = false;
+                displayToastErrorMessage("Only image files are allowed.");
+                break;
+            }
         }
-        input1.disabled = true;
-        input1.style.cursor = "not-allowed";
-        inputDiv.style.backgroundColor = "lightgray";
+        if (isValid) {
+            clearToastErrorMessage();
+            for (let i = 0; i < files.length; i++) {
+                ImageArray.push(files[i]);
+            }
+            input1.disabled = true;
+            input1.style.cursor = "not-allowed";
+            inputDiv.style.backgroundColor = "lightgray";
+        }
+        displayQueuedImage();
+        uploadImages();
+    } else {
+        displayToastErrorMessage("You can't upload more than 4 images.");
     }
-    displayQueuedImage();
 });
 
 inputDiv.addEventListener("drop", (e) => {
-    e.preventDefault();
-    const files = e.dataTransfer.files;
-    let isValid = true;
-    for (let i = 0; i < files.length; i++) {
-        const fileType = files[i].type;
-        if (!fileType.match("image.*")) {
-            isValid = false;
-            displayToastErrorMessage("Only image files are allowed.");
-            break;
-        }
-    }
-    if (isValid) {
-        clearToastErrorMessage();
+    if (ImageArray.length < 4) {
+        e.preventDefault();
+        const files = e.dataTransfer.files;
+        let isValid = true;
         for (let i = 0; i < files.length; i++) {
-            if (ImageArray.every((image) => image.name !== files[i].name)) {
-                ImageArray.push(files[i]);
+            const fileType = files[i].type;
+            if (!fileType.match("image.*")) {
+                isValid = false;
+                displayToastErrorMessage("Only image files are allowed.");
+                break;
             }
         }
-        input1.disabled = true;
-        input1.style.cursor = "not-allowed";
-        inputDiv.style.backgroundColor = "lightgray";
-    }
-    displayQueuedImage();
+        if (isValid) {
+            clearToastErrorMessage();
+            for (let i = 0; i < files.length; i++) {
+                if (ImageArray.every((image) => image.name !== files[i].name)) {
+                    ImageArray.push(files[i]);
+                }
+            }
+            input1.disabled = true;
+            input1.style.cursor = "not-allowed";
+            inputDiv.style.backgroundColor = "lightgray";
+        }
+        displayQueuedImage();
+        uploadImages();
+    } else {}
 });
 
-addSubImageBtn.addEventListener('click', () => {
-    input1.disabled = false;
-    input1.style.cursor = "pointer";
-    inputDiv.style.backgroundColor = "transparent";
-    displayQueuedImage();
-})
+addSubImageBtn.addEventListener("click", () => {
+    if (ImageArray.length < 4) {
+        input1.disabled = false;
+        input1.style.cursor = "pointer";
+        inputDiv.style.backgroundColor = "transparent";
+        displayQueuedImage();
+    } else {
+        displayToastErrorMessage("You can't upload more than 4 images.");
+    }
+});
 
 function displayQueuedImage() {
-    //   if (ImageArray.length === 0) return;
-    //   if (ImageArray.length === 1) {
-    //     imgDisplay.src = URL.createObjectURL(ImageArray[0]);
-    //     return;
-    //   }
-    //   if (ImageArray.length === 2) {
-    //     imgDisplay.src = URL.createObjectURL(ImageArray[0]);
-    //     imgDisplay2.src = URL.createObjectURL(ImageArray[1]);
-    //     return;
-    //   }
+    // if (ImageArray.length === 0) return;
+    // if (ImageArray.length === 1) {
+
+    //   return;
+    // }
+    // if (ImageArray.length === 2) {
+    //   imgDisplay.src = URL.createObjectURL(ImageArray[0]);
+    //   imgDisplay2.src = URL.createObjectURL(ImageArray[1]);
+    //   return;
+    // }
+    // if (ImageArray.length === 3) {
+    //   imgDisplay.src = URL.createObjectURL(ImageArray[0]);
+    //   imgDisplay2.src = URL.createObjectURL(ImageArray[1]);
+    //   imgDisplay3.src = URL.createObjectURL(ImageArray[2]);
+    //   return;
+    // }
+    // if (ImageArray.length === 4) {
+    //   imgDisplay.src = URL.createObjectURL(ImageArray[0]);
+    //   imgDisplay2.src = URL.createObjectURL(ImageArray[1]);
+    //   imgDisplay3.src = URL.createObjectURL(ImageArray[2]);
+    //   imgDisplay4.src = URL.createObjectURL(ImageArray[3]);
+    // }
     for (let i = 0; i < ImageArray.length; i++) {
         imgDisplay[i].src = URL.createObjectURL(ImageArray[i]);
     }
-    // imgDisplay.src = URL.createObjectURL(ImageArray[0]);
-    // imgDisplay2.src = URL.createObjectURL(ImageArray[1]);
+    if (ImageArray.length === 1) {
+        for (let i = 0; i < ImagePreview0.length; i++) {
+            ImagePreview0[i].src = URL.createObjectURL(ImageArray[0]);
+        }
+    }
+    if (ImageArray.length === 2) {
+        for (let i = 0; i < ImagePreview0.length; i++) {
+            ImagePreview0[i].src = URL.createObjectURL(ImageArray[0]);
+        }
+        ImagePreview1[0].src = URL.createObjectURL(ImageArray[1]);
+    }
+    if (ImageArray.length === 3) {
+        for (let i = 0; i < ImagePreview0.length; i++) {
+            ImagePreview0[i].src = URL.createObjectURL(ImageArray[0]);
+        }
+        ImagePreview1[0].src = URL.createObjectURL(ImageArray[1]);
+        ImagePreview2[0].src = URL.createObjectURL(ImageArray[2]);
+    }
+    if (ImageArray.length === 4) {
+        for (let i = 0; i < ImagePreview0.length; i++) {
+            ImagePreview0[i].src = URL.createObjectURL(ImageArray[0]);
+        }
+        ImagePreview1[0].src = URL.createObjectURL(ImageArray[1]);
+        ImagePreview2[0].src = URL.createObjectURL(ImageArray[2]);
+        ImagePreview3[0].src = URL.createObjectURL(ImageArray[3]);
+    }
+
+}
+
+function uploadImages() {
+    const formData = new FormData();
+
+    // Append each file in ImageArray to the formData
+    ImageArray.forEach((file, index) => {
+        formData.append(`images[${index}]`, file);
+    });
 }
 
 function displayToastErrorMessage(message) {
@@ -152,16 +213,23 @@ function clearToastErrorMessage() {
 
 let productNameInput = document.getElementById("productName");
 let productNameCard = document.getElementById("productNameCard");
+let productNameCard2 = document.getElementById("productNameCard2");
 
 let DescriptionInput = document.getElementById("Description");
 let DescriptionCard = document.getElementById("DescriptionCard");
+let DescriptionCard2 = document.getElementById("DescriptionCard2");
 
 let SalePriceInput = document.getElementById("SalePrice");
 let SalePriceCard = document.getElementById("SalePriceCard");
+let SalePriceCard2 = document.getElementById("SalePriceCard2");
+
+let RegularPriceInput = document.getElementById("RegularPrice");
+let RegularPriceCard = document.getElementById("RegularPriceCard");
 
 function replaceProductName() {
     if (productNameInput.value != "") {
         productNameCard.innerText = productNameInput.value;
+        productNameCard2.innerText = productNameInput.value;
     } else {
         productNameCard.innerText = "Product Name";
     }
@@ -171,6 +239,7 @@ productNameInput.addEventListener("keyup", replaceProductName);
 function replaceDescription() {
     if (DescriptionInput.value != "") {
         DescriptionCard.innerText = DescriptionInput.value;
+        DescriptionCard2.innerText = DescriptionInput.value;
     } else {
         DescriptionCard.innerText = "Description";
     }
@@ -180,9 +249,23 @@ DescriptionInput.addEventListener("keyup", replaceDescription);
 function replaceSalePrice() {
     if (SalePriceInput.value != "") {
         SalePriceCard.innerText = SalePriceInput.value;
-    } else {
-        SalePriceCard.innerText = "Sale Price";
-    }
+        SalePriceCard2.innerText = SalePriceInput.value;
+    } 
+    // else {
+    //     SalePriceCard.innerText = "Sale Price";
+    //     SalePriceCard2.innerText = "Sale Price";
+    // }
 }
 SalePriceInput.addEventListener("keyup", replaceSalePrice);
 SalePriceInput.addEventListener("change", replaceSalePrice);
+
+function replaceRegularPrice() {
+    if (RegularPriceInput.value != "") {
+        RegularPriceCard.innerText = RegularPriceInput.value;
+    }
+    //  else {
+    //     RegularPriceCard.innerText = "Sale Price";
+    // }
+}
+RegularPriceInput.addEventListener("keyup", replaceRegularPrice);
+RegularPriceInput.addEventListener("change", replaceRegularPrice);
