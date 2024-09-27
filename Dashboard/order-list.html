@@ -62,7 +62,7 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link " href="">
+                <a class="nav-link collapsed" href="index-Dashboard.html">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
@@ -70,10 +70,9 @@
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#Products-nav" data-bs-toggle="collapse" href="#">
-                    <i class='bx bx-package'></i></i><span>Products</span><i
-                        class="bi bi-chevron-down ms-auto"></i>
+                    <i class='bx bx-package'></i></i><span>Products</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
-                <ul id="Products-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <ul id="Products-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                     <li>
                         <a href="">
                             <i class="bi bi-circle"></i><span>View all Products</span>
@@ -108,7 +107,8 @@
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#Admins-nav" data-bs-toggle="collapse" href="#">
-                    <i class="fa-regular fa-chess-king"></i><span>Admins</span><i class="bi bi-chevron-down ms-auto"></i>
+                    <i class="fa-regular fa-chess-king"></i><span>Admins</span><i
+                        class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="Admins-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
@@ -127,7 +127,7 @@
             <li class="nav-heading">Pages</li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="order-list.html">
+                <a class="nav-link active" href="order-list.html">
                     <i class='bx bx-file'></i>
                     <span>Order list</span>
                 </a>
@@ -155,65 +155,16 @@
         <div class="container-fluid">
             <div class="row pt-4">
                 <div class="pagetitle">
-                    <h1>Dashboard</h1>
+                    <h1>Orders List</h1>
                     <nav>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Orders List</li>
                         </ol>
                     </nav>
                 </div><!-- End Breadcrumbs with a page title -->
-                <div class="col-6 col-lg-3 mb-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center mb-1">
-                                <p class="mb-0 fw-semibold">Total Revenue</p>
-                                <i class='bx bx-dollar fs-5'></i>
-                            </div>
-                            <p class="mb-0 fs-2 fw-bold">$45,231.89</p>
-                            <p class="mb-0 fc-gray fw-semibold" style="font-size: 14px;">+20.1% from last month</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center mb-1">
-                                <p class="mb-0 fw-semibold">Orders</p>
-                                <i class='bx bx-credit-card fs-5'></i>
-                            </div>
-                            <p class="mb-0 fs-2 fw-bold">+12,234</p>
-                            <p class="mb-0 fc-gray fw-semibold" style="font-size: 14px;">+19% from last month</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center mb-1">
-                                <p class="mb-0 fw-semibold">Users</p>
-                                <i class="bi bi-people fs-5 d-flex"></i>
-                            </div>
-                            <p class="mb-0 fs-2 fw-bold">+2350</p>
-                            <p class="mb-0 fc-gray fw-semibold" style="font-size: 14px;">+180% from last month</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center mb-1">
-                                <p class="mb-0 fw-semibold">Out of stock</p>
-                                <i class="bi bi-bag-x fs-5 d-flex"></i>
-                            </div>
-                            <p class="mb-0 fs-2 fw-bold">0</p>
-                            <p class="mb-0 fc-gray fw-semibold" style="font-size: 14px;">+100% from last month</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row pb-4">
-                <div class="col-12">
+
+                <div class="col-12 pb-4">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Recent Orders</h5>
@@ -240,7 +191,7 @@
                                             <td><span class="badge text-bg-success">Delivered</span></td>
                                             <td>60 LE</td>
                                             <td class="py-3">
-                                                <a href="" class="view-order py-2 px-2">
+                                                <a href="order-Details.html" class="view-order py-2 px-2">
                                                     View <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                                 </a>
                                             </td>
@@ -253,7 +204,7 @@
                                             <td><span class="badge text-bg-warning">Pennding</span></td>
                                             <td>60 LE</td>
                                             <td class="py-3">
-                                                <a href="" class="view-order py-2 px-2">
+                                                <a href="order-Details.html" class="view-order py-2 px-2">
                                                     View <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                                 </a>
                                             </td>
@@ -266,7 +217,7 @@
                                             <td><span class="badge text-bg-success">Delivered</span></td>
                                             <td>60 LE</td>
                                             <td class="py-3">
-                                                <a href="" class="view-order py-2 px-2">
+                                                <a href="order-Details.html" class="view-order py-2 px-2">
                                                     View <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                                 </a>
                                             </td>
@@ -279,7 +230,7 @@
                                             <td><span class="badge text-bg-success">Delivered</span></td>
                                             <td>60 LE</td>
                                             <td class="py-3">
-                                                <a href="" class="view-order py-2 px-2">
+                                                <a href="order-Details.html" class="view-order py-2 px-2">
                                                     View <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                                 </a>
                                             </td>
@@ -292,7 +243,7 @@
                                             <td><span class="badge text-bg-danger">Canceled</span></td>
                                             <td>60 LE</td>
                                             <td class="py-3">
-                                                <a href="" class="view-order py-2 px-2">
+                                                <a href="order-Details.html" class="view-order py-2 px-2">
                                                     View <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                                 </a>
                                             </td>
@@ -305,7 +256,7 @@
                                             <td><span class="badge text-bg-success">Delivered</span></td>
                                             <td>60 LE</td>
                                             <td class="py-3">
-                                                <a href="" class="view-order py-2 px-2">
+                                                <a href="order-Details.html" class="view-order py-2 px-2">
                                                     View <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                                 </a>
                                             </td>
@@ -318,7 +269,7 @@
                                             <td><span class="badge text-bg-success">Delivered</span></td>
                                             <td>60 LE</td>
                                             <td class="py-3">
-                                                <a href="" class="view-order py-2 px-2">
+                                                <a href="order-Details.html" class="view-order py-2 px-2">
                                                     View <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                                 </a>
                                             </td>
@@ -326,7 +277,6 @@
                                     </tbody>
                                 </table>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
@@ -335,6 +285,10 @@
     </main>
 
 
+   
+
+
+  
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main-Dashboard.js"></script>
 </body>

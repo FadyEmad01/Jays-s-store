@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- icon -->
+    <link href="assets/vendors/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendors/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <!--  -->
+    <!-- font 1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <!-- font 2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+    <!--  -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style-Dashboard.css">
+    <title>Jay's</title>
+</head>
+
+<body>
+    <nav class="navbar py-3 bg-white" style="position: sticky;  top: 0; z-index: 999;">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center gap-2">
+                <button class="navbar-toggler toggle-sidebar-btn" style="border: none;">
+                    <img src="../assets/img/humb-menu.svg" style="width: 24px;" alt="">
+                </button>
+                <a class="navbar-brand" href="../index.html"><img src="../assets/img/logo.jpg" alt=""
+                        style="width: 120px;"></a>
+                <!-- <ul class="d-flex gap-3 px-3 me-auto mb-2 mb-lg-0" style="list-style: none;">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                </ul> -->
+
+            </div>
+            <div class="d-flex align-items-center gap-3" role="search">
+                <a href="cart.html">
+                    <div class="position-relative">
+                        <img src="../assets/img/cart.svg" style="width: 22px;" alt=""><span
+                            class="position-absolute top-100 start-100 translate-middle badge-cart rounded-pill cart-Notify">+9
+                            <span class="visually-hidden">unread messages</span></span>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="modal" data-bs-target="#seacrhBackdrop"><img src="../assets/img/search.svg"
+                        style="width: 29px;" alt=""></a>
+                <a href=""><img src="../assets/img/user.svg" style="width: 29px;" alt=""></a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- ======= Sidebar ======= -->
+
+    <aside id="sidebar" class="sidebar pt-5">
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="index-Dashboard.html">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#Products-nav" data-bs-toggle="collapse" href="#">
+                    <i class='bx bx-package'></i></i><span>Products</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="Products-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>View all Products</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Add-product-Dashboard.html">
+                            <i class="bi bi-circle"></i><span>Add Products</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Products Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#Categories-nav" data-bs-toggle="collapse" href="#">
+                    <i class='bx bx-category'></i><span>Categories</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="Categories-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="forms-elements.html">
+                            <i class="bi bi-circle"></i><span>View all Categories</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="forms-layouts.html">
+                            <i class="bi bi-circle"></i><span>Add Categories</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Categories Nav -->
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#Admins-nav" data-bs-toggle="collapse" href="#">
+                    <i class="fa-regular fa-chess-king"></i><span>Admins</span><i
+                        class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="Admins-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="forms-elements.html">
+                            <i class="bi bi-circle"></i><span>View all Admins</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="forms-layouts.html">
+                            <i class="bi bi-circle"></i><span>Add Admins</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Admin Nav -->
+
+            <li class="nav-heading">Pages</li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="order-list.html">
+                    <i class='bx bx-file'></i>
+                    <span>Order list</span>
+                </a>
+            </li><!-- End Order list Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-faq.html">
+                    <i class="bi bi-person"></i>
+                    <span>User List</span>
+                </a>
+            </li><!-- End User List Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-contact.html">
+                    <i class="bi bi-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li><!-- End Contact Page Nav -->
+
+        </ul>
+
+    </aside><!-- End Sidebar-->
+
+    <main id="main">
+        <div class="container-fluid">
+            <div class="row pt-4">
+                <div class="pagetitle">
+                    <h1>Orders List</h1>
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Orders Details</li>
+                        </ol>
+                    </nav>
+                </div><!-- End Breadcrumbs with a page title -->
+
+                <div class="col-12 pb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <div class="d-flex align-items-center gap-3 flex-wrap">
+                                        <h5 class="card-title fw-bold mb-0">Orders ID: #<span>25426</span></h5>
+                                        <span class="badge text-bg-warning">Pennding</span>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2 flex-wrap mt-3">
+                                        <i class='bx bx-calendar fs-5'></i>
+                                        <p class="mb-0">Feb 16,2022 - Feb 20,2022</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option disabled selected>Change Satus</option>
+                                        <option value="Pennding">Pennding</option>
+                                        <option value="Delivered">Delivered</option>
+                                        <option value="Canceled">Canceled</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-lg-4 col-md-6 col-12 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body h-100 d-flex flex-column justify-content-between">
+                                            <div class="d-flex align-items-start gap-2">
+                                                <span class="box-badge"><i class='bx bx-user fc-white fs-5'></i></span>
+                                                <div class="col">
+                                                    <h5 class="fw-bold mb-1">Customer</h5>
+                                                    <p class="mb-0 fc-gray">Full Name: <span>Shristi Singh</span></p>
+                                                    <p class="mb-0 fc-gray">Email: <span>shristi@gmail.com</span></p>
+                                                    <p class="mb-0 fc-gray">Phone: <span>+91 904 231 1212</span></p>
+                                                </div>
+                                            </div>
+                                            <button class="view-order w-100 mt-3 border border-0 py-1">View
+                                                profile</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body h-100 d-flex flex-column justify-content-between">
+
+                                            <div class="d-flex align-items-start gap-2">
+                                                <span class="box-badge"><i
+                                                        class='bx bx-shopping-bag fc-white fs-5'></i></span>
+                                                <div class="col">
+                                                    <h5 class="fw-bold mb-1">Order Info</h5>
+                                                    <p class="mb-0 fc-gray">Shipping: <span>Next express</span></p>
+                                                    <p class="mb-0 fc-gray">Payment Method: <span>Paypal</span></p>
+                                                    <p class="mb-0 fc-gray">Status: <span>Pending</span></p>
+                                                </div>
+                                            </div>
+                                            <button class="view-order w-100 mt-3 border border-0 py-1">Download
+                                                info</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12 mb-3">
+                                    <div class="card h-100">
+                                        <div class="card-body h-100 d-flex flex-column justify-content-between">
+                                            <div class="d-flex align-items-start gap-2">
+                                                <span class="box-badge"><i
+                                                        class="bi bi-geo-alt fc-white fs-5"></i></span>
+                                                <div class="col">
+                                                    <h5 class="fw-bold mb-1">Order Info</h5>
+                                                    <p class="mb-0 fc-gray">Address: <span> Dharam Colony, Palam
+                                                            Vihar, Gurgaon, Haryana </span></p>
+                                                </div>
+                                            </div>
+                                            <button class="view-order w-100 mt-3 border border-0 py-1">View
+                                                profile</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="card h-100">
+                                        <div class="card-body h-100 d-flex flex-column justify-content-between">
+                                            <div class="d-flex align-items-start gap-2">
+                                                <div class="col">
+                                                    <h5 class="fw-bold mb-1">Payment Info</h5>
+                                                    <p class="mb-0 fc-gray"><span> Master Card: </span> <span> **** ****
+                                                            6557</span></p>
+                                                    <p class="mb-0 fc-gray">Business name: <span> Master Card
+                                                        </span><span>Shristi Singh</span></p>
+                                                    <p class="mb-0 fc-gray">Phone: <span>+91 904 231 1212</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 pb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">The Order</h5>
+                            <hr>
+                            <div class="table-responsive">
+                                <table class="table align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Product</th>
+                                            <th scope="col">Quantity</th>
+                                            <th scope="col">Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> <img class="img-order-table" src="../../../assets/img/p2.jpeg" alt="">
+                                                card title</td>
+                                            <td>1</td>
+                                            <td>60 LE</td>
+                                        </tr>
+                                        <tr>
+                                            <td> <img class="img-order-table" src="../../../assets/img/p2.jpeg" alt="">
+                                                card title</td>
+                                            <td>1</td>
+                                            <td>60 LE</td>
+                                        </tr>
+                                        <tr>
+                                            <td> <img class="img-order-table" src="../../../assets/img/p2.jpeg" alt="">
+                                                card title</td>
+                                            <td>1</td>
+                                            <td>60 LE</td>
+                                        </tr>
+                                        <tr>
+                                            <td> <img class="img-order-table" src="../../../assets/img/p2.jpeg" alt="">
+                                                card title</td>
+                                            <td>1</td>
+                                            <td>60 LE</td>
+                                        </tr>
+                                        <tr>
+                                            <td> <img class="img-order-table" src="../../../assets/img/p2.jpeg" alt="">
+                                                card title</td>
+                                            <td>1</td>
+                                            <td>60 LE</td>
+                                        </tr>
+                                        <tr>
+                                            <td> <img class="img-order-table" src="../../../assets/img/p2.jpeg" alt="">
+                                                card title</td>
+                                            <td>1</td>
+                                            <td>60 LE</td>
+                                        </tr>
+                                        <tr>
+                                            <td> <img class="img-order-table" src="../../../assets/img/p2.jpeg" alt="">
+                                                card title</td>
+                                            <td>1</td>
+                                            <td>60 LE</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <h5 class="fw-bolder fs-3">Summary</h5>
+                                <div class="card grainy-light">
+                                    <div class="card-body">
+                                        <h5 class="fw-bolder fc-black pb-2">The Order</h5>
+                                        <div class="d-flex justify-content-between align-items-center pb-3">
+                                            <p class="mb-0">Subtotal</p>
+                                            <p class="fw-bolder text-truncate fc-black mb-0">60 LE</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center pb-3">
+                                            <p class="mb-0">Delivery</p>
+                                            <p class="fw-bolder text-truncate fc-black mb-0">Free</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="mb-0">Taxes</p>
+                                            <p class="fw-bolder text-truncate fc-black mb-0">10 LE</p>
+                                        </div>
+                                        <hr>
+                                        <div class="d-flex justify-content-between align-items-center ">
+                                            <h5 class="fw-bolder text-truncate fc-black mb-0">Total</h5>
+                                            <h5 class="fw-bolder text-truncate fc-black mb-0">70 LE</h5>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+
+
+
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main-Dashboard.js"></script>
+</body>
+
+</html>
