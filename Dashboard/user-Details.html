@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- icon -->
+    <link href="assets/vendors/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendors/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <!--  -->
+    <!-- font 1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <!-- font 2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+    <!--  -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style-Dashboard.css">
+    <title>Jay's</title>
+</head>
+
+<body>
+    <nav class="navbar py-3 bg-white" style="position: sticky;  top: 0; z-index: 999;">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center gap-2">
+                <button class="navbar-toggler toggle-sidebar-btn" style="border: none;">
+                    <img src="../assets/img/humb-menu.svg" style="width: 24px;" alt="">
+                </button>
+                <a class="navbar-brand" href="../index.html"><img src="../assets/img/logo.jpg" alt=""
+                        style="width: 120px;"></a>
+                <!-- <ul class="d-flex gap-3 px-3 me-auto mb-2 mb-lg-0" style="list-style: none;">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                </ul> -->
+
+            </div>
+            <div class="d-flex align-items-center gap-3" role="search">
+                <a href="cart.html">
+                    <div class="position-relative">
+                        <img src="../assets/img/cart.svg" style="width: 22px;" alt=""><span
+                            class="position-absolute top-100 start-100 translate-middle badge-cart rounded-pill cart-Notify">+9
+                            <span class="visually-hidden">unread messages</span></span>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="modal" data-bs-target="#seacrhBackdrop"><img src="../assets/img/search.svg"
+                        style="width: 29px;" alt=""></a>
+                <a href=""><img src="../assets/img/user.svg" style="width: 29px;" alt=""></a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- ======= Sidebar ======= -->
+
+    <aside id="sidebar" class="sidebar pt-5">
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="index-Dashboard.html">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#Products-nav" data-bs-toggle="collapse" href="#">
+                    <i class='bx bx-package'></i></i><span>Products</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="Products-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>View all Products</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Add-product-Dashboard.html">
+                            <i class="bi bi-circle"></i><span>Add Products</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Products Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#Categories-nav" data-bs-toggle="collapse" href="#">
+                    <i class='bx bx-category'></i><span>Categories</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="Categories-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="forms-elements.html">
+                            <i class="bi bi-circle"></i><span>View all Categories</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="forms-layouts.html">
+                            <i class="bi bi-circle"></i><span>Add Categories</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Categories Nav -->
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#Admins-nav" data-bs-toggle="collapse" href="#">
+                    <i class="fa-regular fa-chess-king"></i><span>Admins</span><i
+                        class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="Admins-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="forms-elements.html">
+                            <i class="bi bi-circle"></i><span>View all Admins</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="forms-layouts.html">
+                            <i class="bi bi-circle"></i><span>Add Admins</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Admin Nav -->
+
+            <li class="nav-heading">Pages</li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="order-list.html">
+                    <i class='bx bx-file'></i>
+                    <span>Order list</span>
+                </a>
+            </li><!-- End Order list Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="user-list.html">
+                    <i class="bi bi-person"></i>
+                    <span>User List</span>
+                </a>
+            </li><!-- End User List Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-contact.html">
+                    <i class="bi bi-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li><!-- End Contact Page Nav -->
+
+        </ul>
+
+    </aside><!-- End Sidebar-->
+
+    <main id="main">
+        <div class="container-fluid">
+            <div class="row pt-4">
+                <div class="pagetitle">
+                    <h1>Users Details</h1>
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Users Details</li>
+                        </ol>
+                    </nav>
+                </div><!-- End Breadcrumbs with a page title -->
+
+                <div class="col-12 pb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold mb-3">User ID: #<span>25426</span></h5>
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between flex-wrap flex-sm-row flex-column">
+                                        <div
+                                            class="d-flex align-items-center gap-2 flex-column justify-content-center flex-sm-row mb-sm-0 mb-3">
+                                            <span class="box-badge-userDrtails"><i
+                                                    class='bx bx-user fc-white fs-2'></i></span>
+                                            <div class="text-sm-start text-center">
+                                                <h5 class="card-title fw-bold mb-1">Fady Emad</h5>
+                                                <h6 class="card-title fw-normal mb-1 fc-gray">fadyemad933@gmail.com</h6>
+                                                <h6 class="card-title fw-normal mb-0 fc-gray">+20 12 03289612</h6>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <a href="https://wa.me/201203289612" target="_blank"
+                                                class="view-order border border-0 py-1 px-3">Chat <i
+                                                    class="fa-brands fa-whatsapp ms-1" style="color: #00A884;"></i></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold mb-3">Personal information</h5>
+                                    <hr>
+                                    <div class="mb-3">
+                                        <p class="mb-1 fc-gray">Name</p>
+                                        <h6 class="fw-bold">Fady Emad</h6>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p class="mb-1 fc-gray">Email</p>
+                                        <h6 class="fw-bold">fadyemad933@gmail.com</h6>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p class="mb-1 fc-gray">Phone</p>
+                                        <h6 class="fw-bold">+20 12 03289612</h6>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p class="mb-1 fc-gray">Address</p>
+                                        <h6 class="fw-bold">Berket an Nasr, Al Salam First</h6>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p class="mb-1 fc-gray">City</p>
+                                        <h6 class="fw-bold">Cairo</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">The Order</h5>
+                                    <hr>
+                                    <div class="table-responsive">
+                                        <table class="table align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Product</th>
+                                                    <th scope="col">Color</th>
+                                                    <th scope="col">Size</th>
+                                                    <th scope="col">Quantity</th>
+                                                    <th scope="col">Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td> <img class="img-order-table" src="../../../assets/img/p2.jpeg" alt="">
+                                                        card title</td>
+                                                    <td>White</td>
+                                                    <td>S/M</td>
+                                                    <td>1</td>
+                                                    <td>60 LE</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> <img class="img-order-table" src="../../../assets/img/p2.jpeg" alt="">
+                                                        card title</td>
+                                                    <td>White</td>
+                                                    <td>S/M</td>
+                                                    <td>1</td>
+                                                    <td>60 LE</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> <img class="img-order-table" src="../../../assets/img/p2.jpeg" alt="">
+                                                        card title</td>
+                                                    <td>White</td>
+                                                    <td>S/M</td>
+                                                    <td>1</td>
+                                                    <td>60 LE</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> <img class="img-order-table" src="../../../assets/img/p2.jpeg" alt="">
+                                                        card title</td>
+                                                    <td>White</td>
+                                                    <td>S/M</td>
+                                                    <td>1</td>
+                                                    <td>60 LE</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> <img class="img-order-table" src="../../../assets/img/p2.jpeg" alt="">
+                                                        card title</td>
+                                                    <td>White</td>
+                                                    <td>S/M</td>
+                                                    <td>1</td>
+                                                    <td>60 LE</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> <img class="img-order-table" src="../../../assets/img/p2.jpeg" alt="">
+                                                        card title</td>
+                                                    <td>White</td>
+                                                    <td>S/M</td>
+                                                    <td>1</td>
+                                                    <td>60 LE</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> <img class="img-order-table" src="../../../assets/img/p2.jpeg" alt="">
+                                                        card title</td>
+                                                    <td>White</td>
+                                                    <td>S/M</td>
+                                                    <td>1</td>
+                                                    <td>60 LE</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bolder fs-3">Summary</h5>
+                                        <div class="card grainy-light">
+                                            <div class="card-body">
+                                                <h5 class="fw-bolder fc-black pb-2">The Order</h5>
+                                                <div class="d-flex justify-content-between align-items-center pb-3">
+                                                    <p class="mb-0">Subtotal</p>
+                                                    <p class="fw-bolder text-truncate fc-black mb-0">60 LE</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center pb-3">
+                                                    <p class="mb-0">Delivery</p>
+                                                    <p class="fw-bolder text-truncate fc-black mb-0">Free</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <p class="mb-0">Taxes</p>
+                                                    <p class="fw-bolder text-truncate fc-black mb-0">10 LE</p>
+                                                </div>
+                                                <hr>
+                                                <div class="d-flex justify-content-between align-items-center ">
+                                                    <h5 class="fw-bolder text-truncate fc-black mb-0">Total</h5>
+                                                    <h5 class="fw-bolder text-truncate fc-black mb-0">70 LE</h5>
+                                                </div>
+        
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main-Dashboard.js"></script>
+</body>
+
+</html>
