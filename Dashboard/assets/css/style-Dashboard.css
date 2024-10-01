@@ -286,6 +286,7 @@ a {
     color: var(--color-white);
     border-radius: 8px;
     transition: .3s;
+    border: 2px solid var(--color-black);
 }
 
 .view-order:hover {
@@ -551,4 +552,29 @@ th {
 
 .fc-light-font{
     color: #c0c0c0;
+}
+
+/* .seacrh .input-group-text {
+    background-color: transparent;
+    border-right: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.seacrh .form-control {
+    background-color: transparent;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: none;
+    padding-left: 0px;
+} */
+.seacrh{
+    max-width: 170px;
+}
+.seacrh .input-group-text {
+    background-color: transparent;
+    border: 1px solid black;
+
 }
